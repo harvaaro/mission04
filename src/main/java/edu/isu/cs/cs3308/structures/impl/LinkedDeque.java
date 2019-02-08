@@ -4,8 +4,6 @@ import edu.isu.cs.cs3308.structures.Deque;
 
 public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 
-	protected DoublyLinkedList<E> dequeList = new DoublyLinkedList<>();
-
 	/**
 	 * @return The value of the last element of the deque (without removing it),
 	 * or null if the deque is empty.
@@ -13,10 +11,10 @@ public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 	@Override
 	public E peekLast() {
 		//DEBUG
-		System.out.println("last: " + dequeList.last());
-		dequeList.printList();
+		System.out.println("last: " + theList.last());
+		theList.printList();
 
-		return (dequeList != null) ? dequeList.last() : null;
+		return (theList != null) ? theList.last() : null;
 	}
 
 	/**
@@ -29,12 +27,12 @@ public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 	@Override
 	public void offerFirst(E element) {
 		if (element != null) {
-			dequeList.addFirst(element);
+			theList.addFirst(element);
 		}
 
 		//DEBUG
-		System.out.println("first: " + dequeList.first());
-		dequeList.printList();
+		System.out.println("first: " + theList.first());
+		theList.printList();
 	}
 
 	/**
@@ -44,9 +42,9 @@ public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 	@Override
 	public E pollLast() {
 		//DEBUG
-		System.out.println("last: " + dequeList.last());
-		dequeList.printList();
+		System.out.println("last: " + theList.last());
+		theList.printList();
 
-		return (dequeList.isEmpty()) ? null : dequeList.removeLast();
+		return (theList.isEmpty()) ? null : theList.removeLast();
 	}
 }
