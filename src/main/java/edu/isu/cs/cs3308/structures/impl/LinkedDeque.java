@@ -10,6 +10,7 @@ public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 	 * @return The value of the last element of the deque (without removing it),
 	 * or null if the deque is empty.
 	 */
+	@Override
 	public E peekLast() {
 		//DEBUG
 		System.out.println("last: " + dequeList.last());
@@ -25,6 +26,7 @@ public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 	 * @param element Element to be inserted to the front of the deque, nothing
 	 * happens if the value is null.
 	 */
+	@Override
 	public void offerFirst(E element) {
 		if (element != null) {
 			dequeList.addFirst(element);
@@ -39,6 +41,7 @@ public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 	 * @return The value of the last item in the Deque and removes that value
 	 * from the deque, if the deque was empty null is returned.
 	 */
+	@Override
 	public E pollLast() {
 		//DEBUG
 		System.out.println("last: " + dequeList.last());

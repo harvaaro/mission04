@@ -9,6 +9,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	 *
 	 * @param element Element to add.
 	 */
+	@Override
 	public void pushRed(E element) {
 
 	}
@@ -19,6 +20,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	 *
 	 * @param element Element to add.
 	 */
+	@Override
 	public void pushBlue(E element) {
 
 	}
@@ -30,6 +32,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	 * @return Element at the top of the Red Stack, or null if the Red Stack is
 	 * empty
 	 */
+	@Override
 	public E popRed() {
 		return null;
 	}
@@ -41,6 +44,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	 * @return Element at the top of the Red Stack, or null if the Blue Stack is
 	 * empty
 	 */
+	@Override
 	public E popBlue() {
 		return null;
 	}
@@ -51,6 +55,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	 * @return The value at the top of the Red Stack, or null if the Red Stack
 	 * is emtpy
 	 */
+	@Override
 	public E peekRed() {
 		return null;
 	}
@@ -61,6 +66,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	 * @return The value at the top of the Blue Stack, or null if the Blue Stack
 	 * is emtpy
 	 */
+	@Override
 	public E peekBlue() {
 		return null;
 	}
@@ -68,6 +74,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	/**
 	 * @return Current size of the Blue Stack
 	 */
+	@Override
 	public int sizeBlue() {
 		return -1;
 	}
@@ -75,6 +82,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	/**
 	 * @return Current size of the Red Stack
 	 */
+	@Override
 	public int sizeRed() {
 		return -1;
 	}
@@ -82,6 +90,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	/**
 	 * @return True if the Blue Stack is empty, false otherwise
 	 */
+	@Override
 	public boolean isBlueEmpty() {
 		return false;
 	}
@@ -89,6 +98,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	/**
 	 * @return True if the Red Stack is empty, false otherwise
 	 */
+	@Override
 	public boolean isRedEmpty() {
 		return false;
 	}
