@@ -4,12 +4,18 @@ import edu.isu.cs.cs3308.structures.Deque;
 
 public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 
+	protected DoublyLinkedList<E> dequeList = new DoublyLinkedList<>();
+
 	/**
 	 * @return The value of the last element of the deque (without removing it),
 	 * or null if the deque is empty.
 	 */
 	public E peekLast() {
-		return null;
+		//DEBUG
+		System.out.println("last: " + dequeList.last());
+		dequeList.printList();
+
+		return (dequeList != null) ? dequeList.last() : null;
 	}
 
 	/**
@@ -19,15 +25,25 @@ public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 	 * @param element Element to be inserted to the front of the deque, nothing
 	 * happens if the value is null.
 	 */
-	public void offerFirst(E element){
+	public void offerFirst(E element) {
+		if (element != null) {
+			dequeList.addFirst(element);
+		}
 
+		//DEBUG
+		System.out.println("first: " + dequeList.first());
+		dequeList.printList();
 	}
 
 	/**
 	 * @return The value of the last item in the Deque and removes that value
 	 * from the deque, if the deque was empty null is returned.
 	 */
-	public E pollLast(){
-		return null;
+	public E pollLast() {
+		//DEBUG
+		System.out.println("last: " + dequeList.last());
+		dequeList.printList();
+
+		return (dequeList.isEmpty()) ? null : dequeList.removeLast();
 	}
 }
