@@ -10,10 +10,6 @@ public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 	 */
 	@Override
 	public E peekLast() {
-		//DEBUG
-		System.out.println("last: " + theList.last());
-		theList.printList();
-
 		return (theList != null) ? theList.last() : null;
 	}
 
@@ -29,10 +25,6 @@ public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 		if (element != null) {
 			theList.addFirst(element);
 		}
-
-		//DEBUG
-		System.out.println("first: " + theList.first());
-		theList.printList();
 	}
 
 	/**
@@ -41,10 +33,6 @@ public class LinkedDeque<E> extends LinkedQueue<E> implements Deque<E> {
 	 */
 	@Override
 	public E pollLast() {
-		//DEBUG
-		System.out.println("last: " + theList.last());
-		theList.printList();
-
 		return (theList.isEmpty()) ? null : theList.removeLast();
 	}
 }
