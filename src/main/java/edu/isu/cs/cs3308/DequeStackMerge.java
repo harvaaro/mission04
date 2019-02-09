@@ -5,8 +5,10 @@ import edu.isu.cs.cs3308.structures.Stack;
 import edu.isu.cs.cs3308.structures.impl.LinkedDeque;
 
 /**
+ * A way to merge two stacks together by using a LinkedDeque
  *
  * @author Isaac Griffith
+ * @author Aaron Harvey
  */
 public class DequeStackMerge {
 

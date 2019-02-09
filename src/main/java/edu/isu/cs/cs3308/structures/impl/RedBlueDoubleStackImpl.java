@@ -2,9 +2,14 @@ package edu.isu.cs.cs3308.structures.impl;
 
 import edu.isu.cs.cs3308.structures.RedBlueDoubleStack;
 
+/**
+ * Implements a 2 stacks in one deque, with the Red values on top, and
+ * the Blue values on the bottom expanding in either direction.
+ *
+ * @author Aaron Harvey
+ * @param <E> any type of list
+ */
 public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
-
-	// Red is top and Blue is bottom
 	protected LinkedDeque<E> listRedBlue = new LinkedDeque<>();
 	protected int redSize = 0;
 	protected boolean redIsEmpty = true;
@@ -13,6 +18,8 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 
 	/**
 	 * Adds the element to the top of the Red Stack, unless the element is null.
+	 * In this case it is adding it to the beginning of the list.
+	 * Will increment the size and set the isempty to false.
 	 *
 	 * @param element Element to add.
 	 */
@@ -28,8 +35,9 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	}
 
 	/**
-	 * Adds the element to the top of the Blue Stack, unless the element is
-	 * null.
+	 * Adds the element to the top of the Blue Stack, unless the element is null.
+	 * In this case it is adding it to the ending of the list.
+	 * Will increment the size and set the isempty to false.
 	 *
 	 * @param element Element to add.
 	 */
@@ -47,6 +55,8 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	/**
 	 * Removes the element at the top of the Red Stack and returns its value,
 	 * unless the Red Stack is empty.
+	 * In this case it removes the beginning of the list.
+	 * Will decrement the size and set the isempty to true.
 	 *
 	 * @return Element at the top of the Red Stack, or null if the Red Stack is
 	 * empty
@@ -68,6 +78,8 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	/**
 	 * Removes the element at the top of the Blue Stack and returns its value,
 	 * unless the Blue Stack is empty.
+	 * In this case it removes the ending of the list.
+	 * Will decrement the size and set the isempty to true.
 	 *
 	 * @return Element at the top of the Red Stack, or null if the Blue Stack is
 	 * empty
@@ -88,6 +100,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 
 	/**
 	 * Returns the value at the top of the Red Stack.
+	 * In this case it is the first value in the list.
 	 *
 	 * @return The value at the top of the Red Stack, or null if the Red Stack
 	 * is emtpy
@@ -99,6 +112,7 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 
 	/**
 	 * Returns the value at the top of the Blue Stack.
+	 * In this case it is the last value in the list.
 	 *
 	 * @return The value at the top of the Blue Stack, or null if the Blue Stack
 	 * is emtpy
@@ -109,6 +123,8 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	}
 
 	/**
+	 * The current size of the Blue stack based on the counter
+	 *
 	 * @return Current size of the Blue Stack
 	 */
 	@Override
@@ -117,6 +133,8 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	}
 
 	/**
+	 * The current size of the Red stack based on the counter
+	 *
 	 * @return Current size of the Red Stack
 	 */
 	@Override
@@ -125,6 +143,8 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	}
 
 	/**
+	 * Whether the Blue stack has values based on the counter size
+	 *
 	 * @return True if the Blue Stack is empty, false otherwise
 	 */
 	@Override
@@ -133,6 +153,8 @@ public class RedBlueDoubleStackImpl<E> implements RedBlueDoubleStack<E> {
 	}
 
 	/**
+	 * Whether the Red stack has values based on the counter size
+	 *
 	 * @return True if the Red Stack is empty, false otherwise
 	 */
 	@Override

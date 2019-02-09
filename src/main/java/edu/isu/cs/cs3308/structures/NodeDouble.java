@@ -8,7 +8,6 @@ package edu.isu.cs.cs3308.structures;
  */
 public class NodeDouble<E> extends Node<E>{
 
-	// Stores what the prev node is.
 	private NodeDouble<E> prev;
 
 	/**

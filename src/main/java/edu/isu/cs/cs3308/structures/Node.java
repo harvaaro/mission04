@@ -9,10 +9,7 @@ package edu.isu.cs.cs3308.structures;
  */
 public class Node<E> {
 
-	// Data stored in the node.
 	protected E data;
-
-	// Stores what the next node is.
 	protected Node<E> next;
 
 	/**
@@ -22,9 +19,6 @@ public class Node<E> {
 	public Node(E data) {
 		this.data = data;
 	}
-
-	// The following code I created with the IntelliJ Generator
-	// I also added comments on them for completeness.
 
 	/**
 	 * Get what data is stored in the Node
